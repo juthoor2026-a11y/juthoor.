@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>جذور -مجموعة لوحات حكايات عرق 
+السنديان التراثية                        </title>
+
+    <link rel="stylesheet" href="product-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- 1️⃣ استدعاء مكتبة Google Model Viewer -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+
+<body>
+    <div class="mobile-container">
+        <!-- بنر الصورة الثابتة -->
+        <div class="product-image-banner">
+            <a href="accessories.html" class="back-arrow-btn">
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+            <img src="img.ac/png12.jpeg" alt="  مجموعة لوحات حكايات عرق 
+السنديان التراثية          " class="product-bg-img">
+        </div>
+
+
+
+ <!-- جعل العنصر بحجم 2px ومخفي بصرياً فقط لكي يستمر في تحميل المجسم -->
+<model-viewer 
+    id="ar-viewer"
+    src="models/accessories11.glb" 
+    ios- src="models/accessories11.usdz"
+    alt="لوحة"
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    style="width: 1px; height: 1px; opacity: 0; position: absolute; pointer-events: none;">
+</model-viewer>
+
+
+
+
+<!-- كارت تفاصيل المنتج -->
+        <div class="product-details-card">
+            <h1 class="product-title">    مجموعة لوحات حكايات عرق 
+السنديان التراثية </h1>
+            <span class="product-price">120$</span>
+
+            <div class="heritage-divider">
+                <span class="line-segment"></span>
+                <img src="img/png4.png" class="heritage-icon" alt="نقشة تطريز رام الله">
+                <span class="line-segment"></span>
+            </div>
+
+            <p class="product-description"> مجموعة حائطية متكاملة تضم لوحات هندسية متنوعة تجمع بين الإطارات الخشبية وأطواق التطريز الدائرية الفاخرة. تستعرض تشكيلة من نقوش رام الله كالريش والنجمة وعرق السرو، لتخلق زاوية ثقافية تنبض بالأصالة والأناقة فوق طاولات الكونسول أو غرف المعيشة.
+            </p>
+
+
+            <div class="info-grid">
+                <div class="info-column">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </div>
+                    <h4>الشحن</h4>
+                    <p>شحن مجاني داخل فلسطين</p>
+                </div>
+                <div class="vertical-divider"></div>
+                <div class="info-column">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+                    <h4>وقت التصنيع</h4>
+                    <p>6-8 أسابيع</p>
+                </div>
+            </div>
+
+
+
+
+            <!-- 3️⃣ زر عرض في غرفتي -->
+            <button id="ar-trigger-btn" class="ar-button">
+                <span>عرض في غرفتي</span>
+                <i class="fa-solid fa-expand"></i>
+            </button>
+        </div>
+    </div>
+
+
+
+
+    <!-- 4️⃣ السكربت لتفعيل الكاميرا عند الضغط -->
+   <script>
+  const arButton = document.getElementById('ar-trigger-btn');
+  const arViewer = document.getElementById('ar-viewer');
+
+  arButton.addEventListener('click', () => {
+      // التأكد من استدعاء ميزة الـ AR
+      if (arViewer.canActivateAR) {
+          arViewer.activateAR();
+      } else {
+          alert("جهازك أو المتصفح الحالي لا يدعم ميزة الواقع المعزز مباشرة، يرجى فتح الرابط من متصفح Chrome أو Safari على الجوال.");
+      }
+  });
+</script>
+</body>
+</html>

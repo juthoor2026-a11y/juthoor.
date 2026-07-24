@@ -1,0 +1,244 @@
+/* إعادة تعيين وتجهيز الخطوط */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: #F0ECE4;
+;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* حاوية الهاتف المحمول */
+.mobile-container {
+    width: 375px; /* عرض شاشات الموبايل القياسية */
+    height: 812px;
+    background-color: #F0ECE4;
+; /* لون الخلفية البيج الدافئ المتطابق مع الصورة */
+    border-radius: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* قسم الصورة الخلفية وزر الرجوع */
+.product-image-banner {
+    width: 100%;
+    height:45%; /* يأخذ الجزء العلوي من شاشة الموبايل */
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.product-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 70%;
+}
+
+/* سهم الرجوع العلوي */
+.back-arrow-btn {
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #172B19; /* شفاف وخفيف */
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F0ECE4 ;
+;
+    text-decoration: none;
+    font-size: 16px;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.back-arrow-btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* الكارت السفلي المعلق ذو الانحناءة الدائرية الكبيرة */
+.product-details-card {
+    flex: 1;
+    background-color: #F0ECE4; /* نفس البيج الدافئ المتطابق */
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    margin-top: -35px; /* يرتفع ليتداخل فوق الصورة بشكل رائع */
+    position: relative;
+    padding: 15px 25px 15px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 5;
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.product-details-card .product-title {
+    margin-bottom:  -5px; /* تقليص المسافة تحت السعر */
+}
+/* اسم المنتج والسعر */
+.product-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #172B19; /* الأخضر الداكن التراثي */
+    margin-top: 8px;
+    margin-bottom: 1px;
+    line-height: 1.5;
+}
+
+/* تقليل الفراغ حول الوصف (Paragraph) */
+.product-details-card p {
+    margin-top: -20px;
+    margin-bottom: 10px;
+    line-height: 1.4; /* جعل الأسطر متقاربة قليلاً ومريحة للقراءة */
+    font-size: 0.9rem; /* تصغير الخط بشكل بسيط جداً إذا لزم الأمر لكسب مساحة */
+}
+.product-price {
+    font-size: 20px;
+    font-weight: 600;
+    color: #A18432; /* اللون الذهبي الهادئ للنقوش والسعر */
+    margin-bottom: 0px;
+    margin-bottom: -15px !important;
+}
+
+/* حاوية الفاصل التراثي بالكامل */
+.heritage-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* المسافة بين الخطوط الجانبية والنقشة */
+    width: 85%; /* العرض الإجمالي للفاصل ليناسب التصميم */
+    margin: 10px auto 20px auto;
+}
+
+/* الخطوط الرفيعة الناعمة على جانبي النقشة */
+.line-segment {
+    flex: 1;
+    height: 1px;
+    background-color: #C7B59D; /* لون الخط البيج الهادئ */
+}
+
+/* صورة نقشة التطريز التراثية الوسطية */
+.heritage-icon {
+    width: 25px; /* حجم متناسق جداً ومناسب للنقشة */
+    height: auto;
+    object-fit: contain;
+    /* إعطاء تباين بسيط ولطيف يبرز جمالية تفاصيل النقشة */
+    filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.05)); 
+}
+
+/* نص وصف المنتج */
+.product-description {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #172B19;
+    margin-bottom: 25px;
+    text-align: justify;
+    text-align-last: center; /* ليظهر النص متناسقاً وفي المنتصف */
+}
+
+/* شبكة معلومات الشحن والوقت */
+.info-grid {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.info-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* هذا الفراغ يضمن عدم تداخل الأيقونة مع العنوان ومع النص السفلي */
+    height: auto !important; /* لمنع أي انضغاط تسببه الحاويات الأكبر */
+}
+.icon-wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #E2D3C0; /* خلفية الأيقونات الدائرية المطفية */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.icon-wrapper i {
+    color: #A18432;
+    font-size: 18px;
+}
+
+.info-column h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #172B19;
+    margin-bottom: 1px;
+}
+
+
+.info-column p {
+    font-size: 10px;
+    color: #172B19;
+    margin: 0 !important;
+    line-height: 1;
+}
+
+/* الفاصل الرأسي الرفيع بين العمودين */
+.vertical-divider {
+    width: 1px;
+    height: 60px;
+    background-color: #C7B59D;
+}
+
+/* ==========================================================================
+   إعدادات WebAR الخاصة بـ Model Viewer
+   ========================================================================== */
+
+/* ==========================================================================
+   تنسيق زر الواقع المعزز المباشر (AR Button)
+   ========================================================================== */
+.ar-action-wrapper {
+    width: 100%;
+    margin-top: 5px; /* مسافة مناسبة تفصله عن المعلومات التي فوقه */
+}
+
+.ar-button {
+    width: 100%;
+    padding: 12px 0;
+    background-color: #172B19; /* الأخضر الداكن التراثي الخاص بمشروع JOOZOR */
+    color: #F0ECE4;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.ar-button:hover {
+    background-color: #243f27; /* تفاعل لطيف عند التمرير */
+}
+
+.ar-button:active {
+    transform: scale(0.98); /* تأثير الضغط ليعطي شعوراً بالتفاعل */
+}

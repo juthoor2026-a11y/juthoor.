@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: #ECE7DF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.phone {
+    width: 375px !important;    
+    height: 812px !important;  
+    position: relative;
+    background: #F0ECE4;
+    border: 8px solid #333;     
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.smartphone-frame {
+  width: 390px; 
+    height: 844px;
+    background-color: #F0ECE4;
+    border-radius: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+   border: 8px solid #333;
+}
+
+.smartphone-screen {
+    width: 100%;
+    height: 100%;
+    background-color: #f4eee5; 
+    border-radius: 34px;
+    overflow-y: auto;
+    padding: 24px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.smartphone-screen::-webkit-scrollbar {
+    width: 0px; 
+}
+
+.app-header {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.brand-showcase .brand-logo-img {
+    display: block;
+    width: 160px; 
+    height: auto;
+    margin: 0 auto 5px;
+    object-fit: contain;
+}
+
+.brand-showcase .brand-subtitle {
+    font-family: 'Cairo', sans-serif;
+    font-size: 20px;
+    font-weight: 700; 
+    color: #172B19;
+    margin-top: -28px;
+}
+
+
+.under-desc-olives {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2px;
+    width: 100%;
+}
+
+
+.olive-united-pair {
+    display: flex;
+    gap: -4px; 
+    align-items: center;
+}
+
+.olive-united-pair img {
+    width: 32px;
+    height: auto;
+    object-fit: contain;
+}
+
+
+.olive-sleep-right {
+    transform: rotate(60deg) translateX(-4px); 
+}
+
+
+.olive-sleep-left {
+    transform: rotate(88deg) scaleX(-1) translateX(-3px); 
+}
+
+.brand-description {
+    font-family: 'Cairo', sans-serif;
+    font-size: 11px;
+    color: #172B19;
+    opacity: 0.90; 
+    line-height: 1.5;
+    max-width: 85%;
+    margin: 0 auto;
+    font-weight: 600;
+}
+
+.section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    margin: 10px auto;
+    gap: 12px;
+}
+.section-divider .line {
+    flex: 1;
+    height: 1px;
+    background-color: rgba(23, 43, 25, 0.15);
+}
+
+.divider-pattern-img {
+    width: 16px; 
+    height: auto;
+    object-fit: contain;
+}
+
+.section-divider.small {
+    width: 100%;
+    margin: 8px 0 12px 0;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.artisan-card {
+    background-color: #fcfaf5; 
+    border-radius: 24px;
+    padding: 14px;
+    display: flex; 
+    gap: 14px;
+    align-items: stretch;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06); 
+    position: relative;
+    overflow: hidden;
+     margin-top: -10px; 
+}
+
+.card-details {
+    flex: 1.8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-media {
+    flex: 1;
+   
+    display: flex; 
+}
+
+.card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%; 
+}
+
+.picture-right img {
+    border-radius: 0px 15px 15px 0px; 
+}
+
+.picture-left img {
+    border-radius: 15px 0px 0px 15px; 
+}
+
+.artisan-info h3 {
+    font-family: 'Cairo', sans-serif;
+    font-size: 14px; 
+    font-weight: 700;
+    color: #172B19; 
+}
+
+.artisan-info .location {
+    font-family: 'Cairo', sans-serif;
+    font-size: 8px; 
+    color: #A18432; 
+    font-weight: 700;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 3px; 
+}
+
+.location-icon {
+    width: 10px;
+    height: 10px;
+    color: #A18432; 
+    flex-shrink: 0;
+}
+
+.bio-text p {
+    font-family: 'Cairo', sans-serif;
+    font-size: 8px; 
+    color: #172B19;
+    opacity: 0.85; 
+    line-height: 1.6;
+    margin-bottom: 6px;
+    text-align: justify;
+    font-weight: 400;
+}
+
+.highlight-box {
+    background-color: #f2e9dc;
+    padding: 6px;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+
+.quote-box {
+    margin-top: 10px;
+    background-color: #f4eee3;
+    border-radius: 10px;
+    padding: 14px 10px 8px 10px; 
+    position: relative; 
+}
+
+.quote-text {
+    font-family: 'Cairo', sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    color: #172B19; 
+    opacity: 1.0; 
+    text-align: center;
+    line-height: 1.4;
+    width: 100%;
+}
+
+
+.quote-olive-quote {
+    position: absolute;
+    width: 11px; 
+    height: auto;
+    object-fit: contain;
+    top: 12px; 
+    opacity: 0.85;
+}
+
+.left-quote {
+    left: 1px;
+    transform: rotate(-40deg); 
+}
+
+.right-quote {
+    right: 1px;
+    transform: rotate(40deg) scaleX(-1); 
+}

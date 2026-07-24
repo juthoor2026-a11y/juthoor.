@@ -1,0 +1,209 @@
+
+/* إعادة تعيين وتجهيز الخطوط - متطابق مع صفحتكِ الحالية */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: #F0ECE4; /* نفس اللون الخارجي والداخلي المتناسق */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* حاوية الهاتف المحمول بنفس أبعاد ومواصفات صفحة المنتج */
+.mobile-container {
+    width: 390px; 
+    height: 844px;
+    background-color: #F0ECE4;
+    border-radius: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 24px;
+     border: 8px solid #333;
+}
+
+/* الهيدر العلوي المتناسق */
+.app-header {
+    display: flex;
+   align-items: center;
+    justify-content: flex-start; /* يبدأ العناصر من اليمين */
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    z-index: 5;
+}
+
+/* تثبيت كلمة جذور في منتصف الهيدر تماماً */
+.logo-area {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #172B19;
+    letter-spacing: 0.5px;
+}
+
+/* نقل السهم إلى طرف الشمال (اليسار) وقلبه ليتجه من الشمال لليمين */
+.circle-back-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #172B19;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F0ECE4;
+    text-decoration: none;
+    font-size: 15px;
+    transition: background-color 0.3s;
+    position: absolute;
+    right: 0; /* تم النقل للشمال */
+    top: 0;
+    z-index: 10;
+    transform: scaleX(-1); /* قلب السهم ليتحرك من اليسار لليمين تماماً كالصورة المرفقة */
+}
+
+.circle-back-btn:hover {
+    background-color: rgba(23, 43, 25, 0.85);
+}
+
+/* العناوين الرئيسية لشاشة الأقسام */
+.title-section {
+    text-align: center;
+   margin-top: 20px; /* نزول العناوين لتحت */
+    margin-bottom: 25px;
+}
+
+.main-page-subtitle {
+    font-size: 14px;
+    color: #172B19;
+    opacity: 1;
+    line-height: 2;
+    padding: 0 10px;
+}
+
+
+/* زيادة الفراغات والمسافات الفاصلة بين المربعات (gap) */
+.categories-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* زيادة الفراغ بين كل مربع ومربع بشكل واضح ومريح */
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 50px;
+}
+
+/* إخفاء شريط التمرير المزعج للحفاظ على المظهر */
+.categories-list::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* الكروت الفردية بنفس تصميم كروت العرض الدائرية الكبيرة */
+.category-card {
+    height: 150px;
+    border-radius: 18px; /* متطابق مع انحناءات الكروت في صفحة طاولات */
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    flex-shrink: 0;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* ربط الصور المخرجة من بلندر بالخلفيات */
+.card-sofa { background-image: url('img/png2.png'); }
+.card-tables { background-image: url('img/png3.png'); }
+.card-decor { background-image: url('img/png7.png'); }
+
+/* ابحثي عن الكلاس الحالي gradient-overlay واستبدليه بالكامل بهذا التنسيق المطور */
+.gradient-overlay {
+    width: 100%;
+    height: 100%;
+}
+    
+    /* 1. ضبط حاوية التدرج وجعلها حاوية نسبية (relative) */
+.gradient-overlay {
+    width: 100%;
+    height: 100%;
+    /* تدرج اللون الأخضر التراثي فقط */
+    background: linear-gradient(to left, 
+        rgba(23, 43, 25, 0.98) 0%, 
+        rgba(23, 43, 25, 0.85) 45%, 
+        rgba(23, 43, 25, 0) 100%);
+    padding: 18px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* إنزال النصوص لأسفل الكرت */
+    position: relative; /* مهم جداً لتثبيت الغصن الزائف داخلها */
+    overflow: hidden; /* لمنع خروج الغصن المائل عن حدود الكرت */
+}
+
+/* 2. إضافة الغصن كعنصر زائف مستقل للتحكم في ميله ومقاسه */
+.gradient-overlay::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: -5px;
+    width: 60px; /* يمكنكِ تكبير أو تصغير حجم الغصن من هنا */
+    height: 60px;
+    background-image: url('img/png6.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    /* إمالة وتدوير الغصن (هنا قمنا بإمالته 25 درجة، يمكنكِ تعديل الرقم حسب الرغبة) */
+    transform: rotate(300deg); 
+    
+    z-index: 2; /* ليظهر فوق التدرج الأخضر */
+    pointer-events: none; /* لمنع تداخله مع نقرات الأزرار */
+}
+
+/* احذفي تماماً كلاس .olive-badge القديم لإننا لم نعد بحاجه له في الـ HTML */
+
+.category-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+}
+
+.category-title {
+    color: #FDF2DC;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* رابط الاستكشاف باللون الذهبي الهادئ المعتمد للنقوش والسعر لديكِ */
+.explore-btn {
+    color: #A18432; /* اللون الذهبي المعتمد */
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.2s ease;
+}
+
+.explore-btn:hover {
+    gap: 10px;
+}
+
+.explore-btn i {
+    font-size: 12px;
+}

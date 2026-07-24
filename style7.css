@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+    color: #172B19; 
+}
+
+body {
+    background-color: #e5e3d7; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+
+.mobile-container {
+    width: 390px; 
+    height: 844px;
+    background-color: #F0ECE4; 
+    border-radius: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    overflow-y: auto !important;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+   border: 8px solid #333;
+}
+.mobile-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 0 4px;
+}
+
+.nav-btn {
+    background-color: rgba(23, 43, 25, 0.08); 
+    border: none;
+    color: #172B19; 
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.nav-btn:hover {
+    background-color: rgba(23, 43, 25, 0.15); 
+    transform: scale(1.05);
+}
+
+
+.hero-section {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    height: 110px !important; 
+    
+    margin-top: 25px !important;
+}
+
+.brand-logo {
+    
+    width: 150px !important; 
+    height: 150px !important;
+    
+    
+    max-height: none !important; 
+    max-width: none !important;
+    object-fit: contain;
+}
+
+.sub-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: -2px;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 10px 0;
+}
+
+.separator .line {
+    width: 60px;
+    height: 1.2px;
+    background-color: #cbbca5; 
+}
+
+.embroidery-img-container {
+    width: 50px !important;  
+    height: 50px !important; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.embroidery-icon {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
+}
+
+.intro-text {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 0 15px;
+    font-weight: 600;
+}
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+    gap: 5px !important; 
+    
+    margin: 5px 0;
+}
+.olive-branch-container {
+    margin-top: -8px !important; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+    height: 60px; 
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.olive-branch-img {
+    display: block;
+    
+    width: 40.93px !important;
+    height: 72.7px !important;
+    object-fit: contain;
+    
+   
+    transform: rotate(60deg) !important;
+    
+    
+    transform-origin: center center !important; 
+}
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; 
+    margin-top: 5px;
+    align-items: center; 
+    
+   
+    padding: 0 10px; 
+}
+
+
+.step-card {
+    position: relative; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+    background-color: rgba(230, 215, 195, 0.7); 
+    
+    
+    border-radius: 8px; 
+    
+   
+    width: 335px; 
+    height: 101px; 
+    margin-top: -8px;
+}
+
+.step-content {
+    flex-grow: 1;
+    
+    padding: 8px 10px 8px 10px !important; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: right;
+    gap: 2px; 
+    overflow: visible !important;
+}
+
+.step-title {
+    font-size: 13px !important; 
+    font-weight: 700;
+}
+
+.step-desc {
+    font-size: 10.5px !important; 
+    line-height: 1.3;
+    opacity: 0.95;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: #172B19;
+}
+
+.step-image {
+    width: 38% !important;
+    height: 101px; 
+    flex-shrink: 0;
+    border-radius: 0 8px 8px 0; 
+    overflow: hidden;
+}
+
+.step-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.step-number {
+    position: absolute;
+    right: -9px; 
+    top: 50%;
+    transform: translateY(-50%); 
+    
+    background-color: #172B19; 
+    color: #f1efe4; 
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10.5px;
+    font-weight: 800;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15); 
+    z-index: 10; 
+}

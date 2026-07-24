@@ -1,0 +1,154 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: #ECE7DF; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.mobile-container {
+    width: 390px; 
+    height: 844px;
+    background-color: #F0ECE4; 
+    border-radius: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    position: relative;
+}
+
+.screen-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    padding: 50px 24px 35px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+
+.welcome-header {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+    height: 50px;
+}
+
+.skip-btn {
+    position: absolute;
+    top: 0;       
+    right: 0;     
+    font-size: 15px;
+    font-weight: 700; 
+    color: rgba(23, 43, 25, 0.9); /* شدة لون 90% */
+    text-decoration: none !important;
+    cursor: pointer;       
+}
+.main-logo-img {
+    width: auto;
+    height: 75px; 
+    object-fit: contain;
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) scale(1.7) !important; 
+    transform-origin: center center !important;
+    max-height: none !important;
+    max-width: none !important;
+}
+
+
+.welcome-body.center-version {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    
+    transform: translateY(-235px) !important; 
+}
+
+.welcome-body.center-version .welcome-title {
+    font-size: 28px; 
+    font-weight: 700; 
+    color: #172B19;
+    line-height: 1.1;
+    text-align: center;   
+    margin-top: 0;    
+/* التحكم في مكان العنوان */
+    margin-top: 35px !important;    /* غيري هذا الرقم لإنزال أو رفع العنوان لحاله */
+    margin-bottom: 15px !important; /* المسافة بين العنوان والفقرة التي تحته */    
+    
+}
+
+.welcome-body.center-version .welcome-desc {
+    font-size: 17px; 
+    font-weight: 600;
+    color: rgba(23, 43, 25, 0.9); 
+    line-height: 1.5;
+    text-align: center;   
+    width: 100%;
+}
+
+
+.welcome-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.pagination-container {
+    width: 200px;
+    height: 40px;
+    background-color: rgba(245, 241, 235, 0.6); 
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-stars {
+    display: flex;
+    flex-direction: row; 
+    gap: 16px;          
+}
+
+.pagination-stars .star {
+    font-size: 15px;          
+    color: rgba(23, 43, 25, 0.25); 
+    text-decoration: none !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-stars .star.active {
+    color: #172B19 !important;
+    font-weight: bold;
+}
